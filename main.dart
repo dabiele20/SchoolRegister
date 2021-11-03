@@ -150,20 +150,34 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.only(top: 16),
                   child: FlatButton(
                     onPressed: () => {},
-                    color: Colors.blueGrey,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10), side: BorderSide.),
+                    color: Colors.orange,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10))),
         
                     child: Container(
                       margin: EdgeInsets.only(top: 10, bottom: 10),
-                      child: Column(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Uscite", style: TextStyle(color: Colors.white),),
-                          Text("8", style: TextStyle(fontSize: 30, color: Colors.white)),
+                          IconButton(onPressed: () => {}, icon: Icon(Icons.arrow_back_ios), color: Colors.white,),
+                          Text("Giorno/Mese/Anno", style: TextStyle(color: Colors.white, fontSize: 20),),
+                          IconButton(onPressed: () => {}, icon: Icon(Icons.arrow_forward_ios), color: Colors.white,),
                         ],
                       ),
                     )
                   )
                 ),
+                Container(
+                  width: 1000,
+                  height: 400,
+                  color: Colors.orange.shade100,
+                  
+                  child: 
+                  FlatButton(onPressed: () => {}, 
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))),
+                   child: Container(child: Text("Compiti")
+                )
+                )
+                )
               ]
             
           )
